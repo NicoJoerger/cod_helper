@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting...</title>
+  <script type="text/javascript">
+    // Single Page Apps for GitHub Pages
+    // MIT License
+    // https://github.com/rafgraph/spa-github-pages
+    // This script is forked from https://github.com/rafgraph/spa-github-pages/blob/gh-pages/404.html
+
+    (function(){
+      var redirect = sessionStorage.getItem('redirect');
+      // If redirect is not null, then we were redirected from a 404 page
+      if (redirect) {
+        sessionStorage.removeItem('redirect');
+        // Redirect to the original path
+        history.replaceState(null, null, redirect);
+      } else {
+        // If not redirected from a 404, then this is a direct access to a sub-path
+        // Store the current path in session storage
+        sessionStorage.setItem('redirect', location.pathname + location.search + location.hash);
+        // Redirect to the base index.html
+        location.replace('/cod-helper/'); // This must match your base path in vite.config.js
+      }
+    })();
+  </script>
+</head>
+<body>
+  If you are not redirected automatically, follow this <a href="/">link</a>.
+</body>
+</html>
