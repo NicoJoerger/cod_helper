@@ -1,0 +1,41 @@
+body {
+  background-color: #121212 !important;
+}
+
+.symbol-card {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Make it take full width of its column */
+  padding-top: 100%; /* This creates a square based on the width */
+  position: relative; /* For positioning content inside */
+}
+
+.symbol-card .symbol-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem; /* Re-apply padding here */
+}
+
+
+
+.symbol-card:hover {
+  transform: scale(1.05);
+  border-color: #007bff !important;
+}
+
+.result-box {
+  width: 150px;
+}
+
+.border-primary {
+  border-width: 3px !important;
+}
